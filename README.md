@@ -8,7 +8,7 @@ Built a music generation application that can create an extension to a music seg
 
 In this project, we iterated on three different types of models (CNN, RNN, and GANs) and before settling down on the final architecture which was a variation of the gated recurrent neural network. The model layout can be seen below:
 
-![](images/GAN_Layout.png)
+![](images/RNN_model.png)
 
 During training, we had access to the true extensions but during testing, there was no melody extension for the model to learn from. The architecture needed to be changed as the model only has the input melody and therefore less information to work with. The input is passed through the model, returning a hidden state of the RNN representing that input. Notes are then individually generated and passed through the model and updating the hidden state, one at a time, until a sequence of notes corresponding to 5 seconds is generated. The final model is implemented in the final_model python notebook.
 
